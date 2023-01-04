@@ -9,3 +9,39 @@ que todos os objetos tenham as mesmas propriedades.
 
 3. Modifique o type Pessoa para que possamos escolher apenas entre as cores do arco-íris. Utilize um enum para isso.
 */
+
+enum ARCO_IRIS {
+  VERMELHO = "vermelho",
+  LARANJA = "laranja",
+  AMARELO = "amarelo",
+  VERDE = "verde",
+  AZUL = "azul",
+  AZUL_ESCURO = "azul escuro",
+  VIOETA = "violeta"
+}
+
+type pessoa = {
+  nome: string,
+  idade: number,
+  corFavorita: ARCO_IRIS
+}
+
+const person1: pessoa = {
+  nome: "Jose",
+  idade: 25,
+  corFavorita: ARCO_IRIS.VERDE
+}
+
+const person2: pessoa = {
+  nome: "Fernanda",
+  idade: 53,
+  corFavorita: ARCO_IRIS.AMARELO
+}
+
+const person3: pessoa = {
+  nome: "Alexandre",
+  idade: 33,
+  corFavorita: ARCO_IRIS.LARANJA
+}
+
+console.log([person1, person2, person3])
